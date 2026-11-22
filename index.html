@@ -1,34 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="robots" content="noindex, nofollow" />
-		<title>Adam Nelson</title>
-		<style>
-			body {
-				margin: 0;
-				min-height: 100vh;
-				display: grid;
-				place-content: center;
-				padding: 0 24px;
-				background: #ffffff;
-				color: #151515;
-				font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-				line-height: 1.5;
-			}
-			h1 { font-size: 2rem; font-weight: 600; margin: 0 0 0.5rem; }
-			p { margin: 0; max-width: 34rem; }
-			a { color: inherit; }
-		</style>
-	</head>
-	<body>
-		<main>
-			<h1>Adam Nelson</h1>
-			<p>
-				A new version of this site is in progress. The current site is at
-				<a href="https://adamcnelson.com/">adamcnelson.com</a>.
-			</p>
-		</main>
-	</body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Adam Nelson</title>
+<meta name="description" content="Adam Nelson. Chief Operations Officer, engineer, builder and coach. I make complicated organizations run well, and I build a lot of what they need myself." />
+<link rel="icon" type="image/svg+xml" href="portrait.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+	--paper: #ffffff;
+	--navy: #23284a;
+	--text: #3b3f58;
+	--soft: #70748a;
+	--gold: #d1a019;
+	--hair: #e6e7ee;
+	--wash: #f5f5f9;
+}
+* { box-sizing: border-box; }
+body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--text);
+	font-family: "Montserrat", system-ui, sans-serif;
+	font-size: 17px;
+	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
+}
+a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 3px; }
+
+.page { display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 620px); justify-content: center; column-gap: 88px; padding: 72px 40px 110px; }
+
+.portrait { position: sticky; top: 72px; align-self: start; }
+.photo {
+	aspect-ratio: 4 / 5; border-radius: 14px;
+	background: var(--wash);
+	display: grid; place-items: center; text-align: center;
+	color: var(--soft); font-size: 15px; line-height: 1.5;
+}
+.photo img { width: 62%; height: auto; image-rendering: pixelated; }
+.under { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 15px; font-weight: 500; }
+
+h1 { margin: 20px 0 6px; font-size: 52px; line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; color: var(--navy); }
+.roles { margin: 0 0 30px; font-weight: 600; color: var(--navy); font-size: 18px; }
+.roles span { color: var(--gold); padding: 0 6px; }
+p { margin: 0 0 18px; }
+.lead { font-size: 19px; color: var(--navy); font-weight: 500; line-height: 1.6; }
+
+h2 { margin: 68px 0 20px; font-size: 24px; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; }
+h2::after { content: ""; display: block; width: 44px; height: 3px; background: var(--gold); margin-top: 12px; border-radius: 2px; }
+
+.done { list-style: none; margin: 0; padding: 0; }
+.done li { padding: 16px 0; border-bottom: 1px solid var(--hair); }
+.done li:first-child { border-top: 1px solid var(--hair); }
+.done strong { color: var(--navy); font-weight: 600; }
+
+.believe { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+.believe li { padding-left: 22px; border-left: 3px solid var(--gold); }
+.believe b { display: block; color: var(--navy); font-weight: 600; font-size: 18px; }
+
+.cta { margin-top: 64px; background: var(--wash); border-radius: 14px; padding: 34px 34px 36px; }
+.cta h2 { margin-top: 0; }
+.cta h2::after { display: none; }
+.cta p { margin-bottom: 22px; }
+.btns { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.btn { background: var(--navy); color: #fff; text-decoration: none; padding: 13px 24px; border-radius: 999px; font-weight: 600; font-size: 16px; }
+.btn.alt { background: transparent; color: var(--navy); border: 2px solid var(--navy); padding: 11px 22px; }
+
+@media (max-width: 980px) {
+	.page { grid-template-columns: minmax(0, 620px); padding: 32px 22px 80px; }
+	.portrait { position: static; max-width: 260px; }
+	h1 { font-size: 40px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+	<aside class="portrait">
+		<div class="photo"><img src="portrait.svg" alt="Pixel-art portrait of Adam" /></div>
+		<div class="under"><a href="mailto:adam@adamcnelson.com">Email</a><a href="https://www.linkedin.com/in/A-C-Nelson/">LinkedIn</a><a href="https://www.github.com/nelsonuwp/">GitHub</a></div>
+	</aside>
+
+	<main>
+		<h1>Hi, I'm Adam.</h1>
+		<p class="roles">Chief Operations Officer<span>/</span>Engineer<span>/</span>Builder<span>/</span>Coach</p>
+
+		<p class="lead">I make complicated organizations run well. I started as an engineer, I have led teams for most of my career, and I still build things with my own hands.</p>
+		<p>Today I run operations for a cloud infrastructure company from Montreal. That covers the day to day, and it also covers the harder part: changing how the company operates so it can grow.</p>
+		<p>What makes me different is that I don't wait for tools. When my teams need something, I usually build the first version myself, and these days I build it with AI. In the last year that has been about a dozen working tools that people use every day.</p>
+
+		<h2>Things I've done</h2>
+		<ul class="done">
+			<li><strong>Turned six separate service teams into one operation</strong> with clear ownership from the first design to day-two support.</li>
+			<li><strong>Built about a dozen internal tools myself with AI</strong> in under a year, while doing the day job.</li>
+			<li><strong>Replaced a spreadsheet quoting process</strong> with a live tool that knows the real catalogue and the real cost.</li>
+			<li><strong>Used AI to sort tens of thousands of support tickets by cause</strong>, so the team fixes a problem once and stops answering it.</li>
+			<li><strong>Made every margin traceable</strong> by rebuilding how the business records what things cost.</li>
+			<li><strong>Built a professional services practice from nothing</strong> and ran it for five years.</li>
+			<li><strong>Grew an engineering team from 4 to 16 in six months</strong> to deliver a major aircraft program on time.</li>
+			<li><strong>Coached a college hockey team for nine seasons</strong> and won two conference championships.</li>
+		</ul>
+
+		<h2>How I get it done</h2>
+		<ul class="believe">
+			<li><b>AI reads. Code keeps the rules.</b>I let a model interpret language. I never let it decide a total, a date or a price.</li>
+			<li><b>One source of truth for each question.</b>If two reports can disagree, people stop trusting both.</li>
+			<li><b>Test the idea before building on it.</b>I check a theory against history first. If it predicts nothing, I drop it.</li>
+			<li><b>The right players, not the best ones.</b>Nine seasons behind a bench taught me how teams really work.</li>
+		</ul>
+
+		<h2>Outside of work</h2>
+		<p>I play hockey, I golf as much as the season allows, and I'm a dad. I also run, bike, and enjoy the occasional pint with friends.</p>
+
+		<div class="cta">
+			<h2>Want the full story?</h2>
+			<p>My CV has the details. If you think I could help your organization, I would like to hear about it.</p>
+			<div class="btns"><a class="btn" href="https://adamcnelson.com/resources/resume/Adam%20Nelson%20-%20Resume.pdf">Download my CV</a><a class="btn alt" href="mailto:adam@adamcnelson.com">Email me</a></div>
+		</div>
+	</main>
+</div>
+</body>
 </html>
